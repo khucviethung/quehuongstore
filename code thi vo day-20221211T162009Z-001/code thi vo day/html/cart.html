@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <h3 class="text-center"><i class="fa-solid fa-truck-fast"></i> DANH MỤC HÀNG HÓA</h3>
+    <table  id='danhmuc' border="3">
+        <th>Sản phẩm</th>
+        <th>Giá Tiền</th>
+        <th>Đặt mua</th>
+        <img class="left" src="../images/love.gif" alt="" width="10%">
+        <img class="right" src="../images/shoppinggif.gif" alt="" width="12%">
+        <tr class="justify-content-center align-center">
+            <td>
+                <img src="../images/ip14promax.jpg" width="10%"><P>Iphone 14 pro max</P>
+            </td>
+            <td>34490000</td>
+            <td><button class="button" onclick='them(this)'><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</button></td>
+        </tr>
+        <tr>
+            <td>
+                <img src="../images/ip13promax.jpg" width="10%"><p>Iphone 13 pro max</p>
+            </td>
+            <td>27790000</td>
+            <td><button class="button" onclick='them(this)'><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</button></td>
+        </tr>
+        <tr>
+            <td>
+                <img src="../images/ip13mini.jpg" width="10%"><p>Iphone 13</p>
+            </td>
+            <td>25090000</td>
+            <td><button class="button" onclick='them(this)'><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</button ></td>
+        </tr>
+        <tr>
+            <td>
+                <img src="../images/ip14.png" width="10%"><p>Iphone 14</p>
+            </td>
+            <td>23990000</td>
+            <td><button class="button" onclick='them(this)'><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</button></td>
+        </tr>
+        <tr>
+            <td>
+                <img src="../images/ip13mini.jpg" width="10%"><p>Iphone 14 pro</p>
+            </td>
+            <td>25890000</td>
+            <td><button class="button" onclick='them(this)'><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</button></td>
+        </tr>
+        <tr>
+            <td>
+                <img src="../images/ip12promax.png" width="10%"><p>Iphone 12 pro max</p>
+            </td>
+            <td>15690000</td>
+            <td><button class="button" onclick='them(this)'><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</button></td>
+        </tr>
+        
+        
+    </table>
+    <h3 class="d-block"><i class="fa-solid fa-basket-shopping"></i> GIỎ HÀNG CỦA BẠN</h3>
+    <table border='1'id="cart"></table>
+    <BR>
+    <a href="../html/index.html"><button>Trở về trang chủ <i class="fa-solid fa-house"></i></button></a>
+    <a href="../html/ip14pm.html"><button>Trở lại trang trước <i class="fa-solid fa-arrow-left"></i></button></a>
+    <button onclick="topFunction()" id="myBtn" title="lên đầu trang">Kéo lên đầu trang</button>
+    <h4>TỔNG SỐ TIỀN: <span id="tong">0</span> VNĐ</h4>
+    <script>
+        function them(button) {
+            
+            var row = button.parentElement.parentElement.cloneNode(true);
+            var btnXoa = row.getElementsByTagName("button")[0];
+            
+            btnXoa.innerText = "Xóa sản phẩm";
+            btnXoa.setAttribute('onclick', 'xoa(this)');
+            var cart= document.getElementById("cart").appendChild(row);
+                     
+            tinhTong();
+        }
+        function xoa(button) {
+            var row = button.parentElement.parentElement;
+            var cart = document.getElementById("cart").removeChild(row);
+            let text;
+            
+            confirm('Bạn có chắc muốn xoá sản phẩm này ?') == true
+            
+            tongTien();
+        }
+        function tinhTong() {
+            var cart = document.getElementById("cart");
+            var rows = cart.getElementsByTagName("tr");
+            var tong = 0;
+            for (var i = 0; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName("td");
+                var price = cells[1].innerText.substr(1);
+                tong += 1*price;
+            }
+            var tong = document.getElementById("tong").innerText = tong;
+            
+            if (tong > 6000){
+        var tong = document.getElementById("tong").innerText = tong;
+        }
+        else{
+        var tong = document.getElementById("tong").innerText = tong;
+        }
+    }
+
+    function tongTien() {
+    var cart = document.getElementById("cart");
+    var rows = cart.getElementsByTagName("tr");
+    var tong = 0;
+    for (var i = 0; i < rows.length; i++) {
+        var cells = rows[i].getElementsByTagName("td");
+        var price = cells[1].innerText.substr(1);
+        tong -= 1*price;
+    }
+    if (tong > 6000){
+        var tong = document.getElementById("tong").innerText = tong;
+    }
+    else if (tong < 6000){
+        var tong = document.getElementById("tong").innerText = tong;
+    }
+    else{
+        var tong = document.getElementById("tong").innerText = tong;
+        
+    }
+}
+
+
+// JS scroll to top 
+            let mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+            if (document.body.scrollTop > 520 || document.documentElement.scrollTop > 520) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+.header{
+    background-color: pink;
+    background-repeat: no-repeat;
+    height: 150px;
+
+}
+.header>.col-12{
+    position: relative;
+    top:50px;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    word-spacing: 20px;
+    color:rgb(26, 158, 219);
+    font-weight:bolder;
+}
+.bg-content{
+    background-image: url(../images/backgroundnoel.gif);
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.col-12>img{
+    position: relative;
+    top:-75px;
+    background-size: cover;
+    left:30px;
+}
+.header>img{ 
+    display: block;
+}
+
+/* *Tablet-PC độ phân giải thấp* */
+@media (min-width: 740px) and (max-width: 1023px){
+
+    .container-fluid>img {width: 644px };
+    .content {width: 644px;}
+    }
+    
+    /* *PC độ phân giải thấp* */
+    
+@media (min-width: 1024px) and (max-width: 1239px){
+    
+    .header>img {width: 984px }
+
+    } 
+
+.navbar-brand{
+    font-size: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.dropdown-item:hover{
+    color:red;
+    transform:rotate3d(15px);
+}
+.nav-link:hover{
+    background-color:rgb(85, 211, 233);
+    border-radius: 35px 35px 35px 35px;
+}
+.nav-link{
+    border-radius: 35px 35px 35px 35px;
+}
+             
+.card-body>.card-text{
+    text-align: center;
+}
+.content{
+    background-color: rgb(236, 208, 184);
+}
+
+footer{
+    height: 100px;
+    background-color: black;
+    padding-top: 40px;
+    margin-top: 10px;
+}
+.card{
+    border-radius: 55px 55px 55px 55px;
+}
+.card-body>.card-text{
+    font-size: larger;
+    font-weight:900;
+}
+.navbar-brand{
+    border-radius: 15px 15px 15px 15px;
+    background-color: rgb(238, 144, 144);
+    padding-left:15px;
+    padding-right: 15px;
+    background-image: url(../images/love.gif);
+    font-weight: bolder;
+}
+.dropdown-menu,.dropdown-item{
+    border-radius: 15px 15px 15px 15px;
+}
+.form-select{
+  border-color: #5b7ef3;
+  border-width: 3px;
+  border-radius: 15px 15px 15px 15px;
+}
+#sel1{
+  font-size: 20px;
+}
+.giatien-sanpham{
+  font-size: 30px;
+  font-weight: 900;
+}
+.icon1{
+  color:#3983e4;
+  padding: 5px;
+}
+.icon2{
+  color:#db87f0;
+  padding: 5px;
+}
+.icon4{
+  color:#230cf1;
+  padding: 5px;
+}
+.icon3{
+  padding: 5px;
+}
+.muangay{
+  color:white;
+  background-color: chocolate;
+  width: 50%;
+  height: 50px;
+  border-width: 2px ;
+  border-radius: 45px 45px 45px 45px
+  ;
+}
+--Phần-này-css-XemThêmVềChúngTôi--
+.containers {
+    position: fixed;
+    bottom: 4em;
+    right: 1em;
+    
+  }
+  .iconf{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+  .widget {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 10px;
+    margin-right: 30px !important;
+    font-size: 14px;
+  }
+  .widget.active .menu {
+    width: 344px;
+  }
+  .widget.active .menu .toggle {
+    right: 296px;
+  }
+  .widget.active .menu .toggle i {
+    width: 8px;
+    transition: width 400ms cubic-bezier(0.6, 0, 0.45, 0.99), transform 1000ms cubic-bezier(0.6, 0, 0.45, 0.99) 300ms, top 200ms cubic-bezier(0.6, 0, 0.45, 0.99) 200ms, bottom 200ms cubic-bezier(0.6, 0, 0.45, 0.99) 200ms;
+  }
+  .widget.active .menu .toggle i:first-of-type {
+    top: 19px;
+    transform: rotate(45deg) translate(-1px, -2px);
+  }
+  .widget.active .menu .toggle i:last-of-type {
+    bottom: 19px;
+    transform: rotate(-45deg) translate(-1px, 2px);
+  }
+  .widget.active .menu .list {
+    visibility: visible;
+    flex-direction: row-reverse;
+  }
+  .widget.active .menu .list li {
+    transform: scale(1);
+  }
+  .widget .menu {
+    width: 86px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 100px;
+    background-color: #bad6db;
+    transform: translate(28px, -50%);
+    box-shadow: 0px 10px 30px -15px rgba(0, 0, 0, 0.7);
+    transition: 650ms cubic-bezier(0.79, 0, 0.22, 1);
+  }
+  .widget .menu .toggle {
+    width: 80px;
+    height: 80px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 100px;
+    cursor: pointer;
+    z-index: 100;
+    font-weight: bolder;
+    background-color: #4C5042;
+    transition: 600ms cubic-bezier(0.79, 0, 0.22, 1);
+  }
+  .widget .menu .toggle:hover {
+    background-color: #5b7ef3;
+background-image: linear-gradient(45deg, #30a080 0%, #50a17c 100%);
+
+  }
+
+  .widget .menu .toggle i {
+    width: 50px;
+    height: 2px;
+    position: absolute;
+    display: flex;
+    border-radius: 100px;
+    background-color: #FFF;
+    transition: width 400ms cubic-bezier(0.6, 0, 0.45, 0.99), transform 600ms cubic-bezier(0.6, 0, 0.45, 0.99), top 600ms cubic-bezier(0.6, 0, 0.45, 0.99) 600ms, bottom 600ms cubic-bezier(0.6, 0, 0.45, 0.99) 600ms;
+  }
+  .widget .menu .toggle i:first-of-type {
+    top: 16px;
+  }
+  .widget .menu .toggle i:last-of-type {
+    bottom: 16px;
+  }
+  
+  .widget .menu .list {
+    flex-direction: row;
+    margin: 0;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    position: absolute;
+  }
+  .widget .menu .list li {
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    list-style: none;
+    border-radius: 100px;
+    background-color: #73776C;
+    transform: scale(0);
+    transition: 1500ms cubic-bezier(0.37, 0.01, 0.43, 1.3);
+    transition-delay: 300ms;
+  }
+  .widget .menu .list li:nth-child(1) {
+    transition-delay: 50ms;
+  }
+  .widget .menu .list li:nth-child(2) {
+    transition-delay: 100ms;
+  }
+  .widget .menu .list li:nth-child(3) {
+    transition-delay: 150ms;
+  }
+  .widget .menu .list li:nth-child(4) {
+    transition-delay: 200ms;
+  }
+  .widget .menu .list li:nth-child(5) {
+    transition-delay: 250ms;
+  }
+  .widget .menu .list li:nth-child(6) {
+    transition-delay: 300ms;
+  }
+  
+  .dribbble {
+    position: fixed;
+    display: block;
+    right: 24px;
+    bottom: 24px;
+  }
+  .dribbble img {
+    display: block;
+    width: 76px;
+  }
+
+
